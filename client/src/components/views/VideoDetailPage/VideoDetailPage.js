@@ -9,18 +9,18 @@ import LikeDislikes from './Sections/LikeDislikes';
 function VideoDetailPage(props) {
 
     const videoId = props.match.params.videoId
-    const variable = { videoId: videoId}
+    const variable = { videoId: videoId }
 
     const [VideoDetail, setVideoDetail] = useState([])
     const [Comments, setComments] = useState([])
     useEffect(() => {
         Axios.post('/api/video/getVideoDetail', variable)
-        .then(response => {
-            if(response.data.success) {
-                setVideoDetail(response.data.videoDetail)
-            } else {
-                alert('비디오 정보를 가져오는데 실패했습니다.')
-            }
+            .then(response => {
+                if(response.data.success) {
+                    setVideoDetail(response.data.videoDetail)
+                } else {
+                    alert('비디오 정보를 가져오는데 실패했습니다.')
+                }
         })
 
         Axios.post('/api/comment/getComments', variable)

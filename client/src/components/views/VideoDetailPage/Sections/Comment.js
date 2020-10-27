@@ -7,17 +7,17 @@ import ReplyComment from './ReplyComment';
 function Comment(props) {
     const videoId = props.postId;
     const user = useSelector(state => state.user);
-    const [commentValue, setcommentValue] = useState("")
+    const [CommentValue, setCommentValue] = useState("")
 
     const handleClick = (event) => {
-        setcommentValue(event.currentTarget.value)
+        setCommentValue(event.currentTarget.value);
     }
 
     const onSubmit = (event) => {
         event.preventDefault();
 
         const variables = {
-            contents: commentValue,
+            content: CommentValue,
             writer: user.userData._id,
             postId: videoId
         }
@@ -26,7 +26,7 @@ function Comment(props) {
         .then(response => {
             if(response.data.success) {
                 props.refreshFunction(response.data.result)
-                setcommentValue("")
+                setCommentValue("")
             }else {
                 alert('커멘트 저장 실패')
             }
@@ -43,7 +43,7 @@ function Comment(props) {
 
             {props.commentLists && props.commentLists.map((comment, index) => (
                 (!comment.responseTo &&
-                    <React.Fragment>
+                    <React.Fragment key={comment._id}>
                         <SingleComment refreshFunction={props.refreshFunction} comment={comment} postId={videoId} />
                         <ReplyComment refreshFunction={props.refreshFunction} parentCommentId={comment._id} commentLists={props.commentLists} postId={videoId} />
                     </React.Fragment>
@@ -57,7 +57,7 @@ function Comment(props) {
                 <textarea 
                     style={{ width: '100%', borderRadius:'5px' }}
                     onChange={handleClick}
-                    value={commentValue}
+                    value={CommentValue}
                     placeholder="코멘트 작성"
                 />
                 <br />
