@@ -9,8 +9,8 @@ const { TextArea } = Input;
 const { Title } = Typography;
 
 const PrivateOptions = [
-    {value: 0, label: "Private"},
-    {value: 1, label: "Public"}
+    {value: 0, label: "Public"},
+    {value: 1, label: "Private"}
 ]
 
 const CategoryOptions = [
