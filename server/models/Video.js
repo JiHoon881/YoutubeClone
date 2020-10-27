@@ -7,7 +7,7 @@ const videoSchema = mongoose.Schema({
         ref: 'User'
     },
     title: {
-        type:String,
+        type: String,
         maxlength:50
     },
     description: {

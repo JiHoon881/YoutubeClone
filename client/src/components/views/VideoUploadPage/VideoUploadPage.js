@@ -30,20 +30,20 @@ function VideoUploadPage(props) {
     const [Duration, setDuration] = useState("")
     const [ThumbnailPath, setThumbnailPath] = useState("")
 
-    const onTitleChange = (e) => {
-        setVideoTitle(e.currentTarget.value)
+    const onTitleChange = (event) => {
+        setVideoTitle(event.currentTarget.value)
     }
 
-    const onDescriptionChange = (e) => {
-        setDescription(e.currentTarget.value)
+    const onDescriptionChange = (event) => {
+        setDescription(event.currentTarget.value)
     }
 
-    const onPrivateChange = (e) => {
-        setPrivate(e.currentTarget.value)
+    const onPrivateChange = (event) => {
+        setPrivate(event.currentTarget.value)
     }
 
-    const onCategoryChange = (e) => {
-        setCategory(e.currentTarget.value)
+    const onCategoryChange = (event) => {
+        setCategory(event.currentTarget.value)
     }
 
     const onDrop = (files) => {
@@ -85,8 +85,8 @@ function VideoUploadPage(props) {
 
     }
 
-    const onSubmit = (e) => {
-        e.preventDefault();
+    const onSubmit = (event) => {
+        event.preventDefault();
 
         const variable = {
             writer: user.userData._id,
