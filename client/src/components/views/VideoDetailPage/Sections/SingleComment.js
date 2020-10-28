@@ -53,14 +53,14 @@ function SingleComment(props) {
             
             {OpenReply &&
                 <form style={{ display: 'flex'}} onSubmit={onSubmit} >
-                    <textarea 
+                    <TextArea 
                         style={{ width: '100%', borderRadius:'5px' }}
                         onChange={onHandleChange}
                         value={CommentValue}
                         placeholder="코멘트 작성"
                     />
                     <br />
-                    <button style={{ width: '20%', height: '52px' }} onClick={onSubmit} > Submit</button>
+                    <Button style={{ width: '20%', height: '52px' }} onClick={onSubmit} > Submit</Button>
 
                     
                 </form>

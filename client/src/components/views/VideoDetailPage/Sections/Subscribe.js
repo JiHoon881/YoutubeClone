@@ -1,5 +1,5 @@
-import React, { useEffect, useState} from 'react'
-import Axios from 'axios'
+import React, { useEffect, useState} from 'react';
+import Axios from 'axios';
 
 
 function Subscribe(props) {
@@ -32,9 +32,7 @@ function Subscribe(props) {
     }, [])
 
     const onSubscribe = () => {
-
         let subscribedVariable = {
-
             userTo: props.userTo,
             userFrom: props.userFrom
         }
@@ -42,7 +40,6 @@ function Subscribe(props) {
 
         if(Subscribed) {
             //이미 구독중일 때
-
             Axios.post('/api/subscribe/unSubscribe', subscribedVariable)
                 .then(response => {
                     if(response.data.success) {
