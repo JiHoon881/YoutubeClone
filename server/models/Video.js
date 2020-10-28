@@ -1,14 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const videoSchema = mongoose.Schema({
     writer: {
-        type:Schema.Types.ObjectId,
-        ref: 'User'
+        type: Schema.Types.ObjectId,
+        ref: "User"
     },
     title: {
         type: String,
-        maxlength:50
+        maxlength: 50
     },
     description: {
         type: String
@@ -16,26 +16,25 @@ const videoSchema = mongoose.Schema({
     privacy: {
         type: Number
     },
-    filePath : {
+    filePath: {
         type: String
     },
-    catogory: {
+    category: {
         type: String
     },
-    views : {
+    views: {
         type: Number,
-        default: 0 
+        default: 0
     },
-    duration :{
+    duration: {
         type: String
     },
     thumbnail: {
         type: String
     }
-}, { timestamps: true })
-
-
-
-const Video = mongoose.model('Video', videoSchema);
-
-module.exports = { Video }
+    }, { timestamps: true }
+);
+  
+  const Video = mongoose.model("Video", videoSchema);
+  
+  module.exports = { Video };
