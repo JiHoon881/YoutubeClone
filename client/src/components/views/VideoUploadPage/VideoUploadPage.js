@@ -146,14 +146,14 @@ function VideoUploadPage(props) {
                 </div>
             <br />
             <br />
-            <label>Title</label>
+            <label>제목</label>
             <Input
                 onChange={onTitleChange}
                 value={VideoTitle}
             />
             <br />
             <br />
-            <label>Description</label>
+            <label>설명</label>
             <TextArea 
                 onChange={onDescriptionChange}
                 value={Description}
@@ -177,7 +177,7 @@ function VideoUploadPage(props) {
             <br />
             <br />
             <Button type="primary" size="large" onClick={onSubmit}>
-                Submit
+                제출
             </Button>
 
             </Form>

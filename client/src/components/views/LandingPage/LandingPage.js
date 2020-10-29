@@ -43,12 +43,12 @@ function LandingPage() {
         description=""
         />
         <span>{video.writer.name} </span><br />
-        <span style={{ marginLeft: '3rem' }}>{video.views} views</span> - <span>{moment(video.createdAt).format("MMM Do YY")}</span>
+        <span style={{ marginLeft: '3rem' }}>조회수 {video.views}회</span> - <span>{moment(video.createdAt).format("YYYY.MM.DD")}</span>
         </Col>
     })
     return (
         <div style={{ width: '85%', margin: '3rem auto' }}>
-            <Title level={2} > Recommended </Title>
+            <Title level={2} > 추천 영상 </Title>
             <hr />
 
             <Row gutter={[32, 16]}>

@@ -28,7 +28,7 @@ function Comment(props) {
                 props.refreshFunction(response.data.result)
                 setCommentValue("")
             }else {
-                alert('커멘트 저장 실패')
+                alert('댓글 저장 실패')
             }
         })
     }
@@ -36,7 +36,7 @@ function Comment(props) {
     return (
         <div>
             <br />
-            <p> Replies </p>
+            <p> 댓글 </p>
             <hr />
 
             {/* Comment Lists */}
@@ -58,10 +58,10 @@ function Comment(props) {
                     style={{ width: '100%', borderRadius:'5px' }}
                     onChange={handleClick}
                     value={CommentValue}
-                    placeholder="코멘트 작성"
+                    placeholder="댓글 작성"
                 />
                 <br />
-                <button style={{ width: '20%', height: '52px' }} onClick={onSubmit} > Submit</button>
+                <button style={{ width: '20%', height: '52px' }} onClick={onSubmit} > 제출</button>
 
                 
             </form>

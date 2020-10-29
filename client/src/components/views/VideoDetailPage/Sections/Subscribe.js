@@ -74,7 +74,7 @@ function Subscribe(props) {
                  }}
                  onClick={onSubscribe}
             >
-                {SubscribeNumber} {Subscribed ? 'Subscribed' : 'Subscribe'}
+                {SubscribeNumber} {Subscribed ? '구독중' : '구독하기'}
             </button>
         </div>
     )
