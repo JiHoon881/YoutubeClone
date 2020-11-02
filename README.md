@@ -6,6 +6,7 @@
  - React
  - Redux
 ## 라이브러리
+ - antd
  - Axios
  - Dropzone
     - npm install react-dropzone --save
@@ -13,6 +14,9 @@
     - npm install multer --save
  - ffmpeg
     - npm install fluent-ffmpeg --save
+## Hook
+ - useState
+ - useEffect
 ## 기능
  - 비디오 업로드 
  - 로그인 & 회원가입 
